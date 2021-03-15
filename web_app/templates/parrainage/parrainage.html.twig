@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %} {% block title %}Hello Controller! {% endblock %} {% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px / 1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+
+    <br>
+    <h1>Inscription :
+    </h1>
+    <div class="row">
+
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputNom">Nom de l'enfant</label>
+                        <input type="text" class="form-control" placeholder="nomEnfant" id="inputNom">
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputPrenom">Prénom de l'enfant</label>
+                        <input type="text" class="form-control" placeholder="prenomEnfant" id="inputPrenom">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputPrenom">Date de naissance enfant</label>
+                        <input type="text" class="form-control" placeholder="dateNaissEnfant" id="inputPrenom">
+                    </div>
+                </div>
+                <th scope="col"></th>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputPrenom">Sexe de l'enfant</label>
+                        <input type="text" class="form-control" placeholder="sexe" id="inputPrenom">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputPrenom">Date de parrainage</label>
+                        <input type="text" class="form-control" placeholder="dateParrainage" id="inputPrenom">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputPrenom">Ecole de l'enfant</label>
+                        <input type="text" class="form-control" placeholder="ecole" id="inputPrenom">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputPrenom">Village</label>
+                        <input type="text" class="form-control" placeholder="village" id="inputPrenom">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

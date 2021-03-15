@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %} {% block title %}Hello Controller! {% endblock %} {% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px / 1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+    <br>
+    <h1>Liste Parrainages :
+    </h1>
+    <br>
+    <div class="form-group">
+        <form method="GET" action="">
+            <input type="hidden"=v alue="{{ paginator.page }}" name="page">
+            <select name="limit" class="custom-select" onchange="this.form.submit()">
+					<option {% if paginator.limit == 5 %} selected {% endif %} value="5">5</option>
+					<option {% if paginator.limit == 10 %} selected {% endif %} value="10">10</option>
+					<option {% if paginator.limit == 15 %} selected {% endif %} value="15">15</option>
+				</select>
+        </form>
+    </div>
+    <br>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col">Nom de l'enfant</th>
+                    <th scope="col">Prenom de l'enfant</th>
+                    <th scope="col">Date de naissance enfant</th>
+                    <th scope="col">Sexe de l'enfant</th>
+                    <th scope="col">Date de parrainage</th>
+                    <th scope="col">Ecole de l'enfant</th>
+                    <th scope="col">Village</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            {% for parrainage in paginator.data %}
+
+            <tr class="table-light">
+
+                <td>{{ parrainage.nomEnfant }}</td>
+                <td>{{ parrainage.prenomEnfant }}</td>
+                <td>{{ parrainage.dateNaissEnfant|date('Y-m-d') }}</td>
+                <td>{{ parrainage.sexe }}</td>
+                <td>{{ parrainage.dateParrainage|date('Y-m-d') }}</td>
+                <td>{{ parrainage.ecole }}</td>
+                <td>{{ parrainage.village }}</td>
+                <td>
+                    <a href="/parrainages/supprimerParrainage/{{ parrainage.id }}">
+                        <button type="button" class="btn btn-outline-danger">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewbox="0 0 16 16">
+										<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+										<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+									</svg>
+									Button
+								</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <ul class="pagination">
+                    <li class="page-item {% if  paginator.page - 1  <= 0  %}disabled{% endif %}																		 ">
+                        <a class="page-link" href="?page={{ paginator.page - 1 }}&limit={{ paginator.limit }}">&laquo;</a>
+                    </li>
+                    {% for i in 1..paginator.lastPage %}
+                    <li class="page-item {% if i == paginator.page %}active{% endif %}">
+                        <a class="page-link" href="?page={{ i }}&limit={{ paginator.limit }}">{{ i }}</a>
+                    </li>
+
+                    {% endfor %}
+
+                    <li class="page-item {% if paginator.page + 1  > paginator.lastPage %}disabled{% endif %}">
+                        <a class="page-link" href="?page={{ paginator.page + 1 }}&limit={{ paginator.limit }}">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>{% endblock %}

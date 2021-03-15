@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %} {% block title %}Hello GeoGouvController! {% endblock %} {% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px / 1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #39ff08;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+    <br>
+    <h1>Liste Adherents :
+    </h1>
+    <br>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-primary">
+
+                    <th scope="col">Id</th>
+                    <th scope="col">utilisateur</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">parrainage</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">evenement</th>
+                    <th scope="col"></th>
+                    <th scope="col">don</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            {% for adherent in adherent %}
+
+            <tr class="table-light">
+
+                <td>{{ adherent.id }}</td>
+                <td>{{ adherent.utilisateur.nom }}</td>
+                <td>{{ adherent.utilisateur.prenom }}</td>
+                <td>{{ adherent.utilisateur.dateNaissance|date('d-m-Y') }}</td>
+                <td>{{ adherent.utilisateur.email }}</td>
+                <td>{{ adherent.utilisateur.telephone }}</td>
+                <td>{{ adherent.utilisateur.adresse }}</td>
+                <td>{{ adherent.utilisateur.codePostal }}</td>
+                <td>{{ adherent.utilisateur.ville }}</td>
+                <td>{{ adherent.parrainage.nomEnfant }}</td>
+                <td>{{ adherent.parrainage.prenomEnfant }}</td>
+                <td>{{ adherent.parrainage.dateNaissEnfant|date('d-m-Y') }}</td>
+                <td>{{ adherent.parrainage.sexe }}</td>
+                <td>{{ adherent.parrainage.dateParrainage|date('d-m-Y') }}</td>
+                <td>{{ adherent.parrainage.ecole }}</td>
+                <td>{{ adherent.parrainage.village }}</td>
+                <td>{{ adherent.evenement.libelle }}</td>
+                <td>{{ adherent.evenement.Date|date('d-m-Y') }}</td>
+                <th>{{ adherent.don.montant }}</th>
+                <td>{{ adherent.don.Date|date('d-m-Y') }}</td>
+
+                <td>
+
+                    <a href="/adherents/mettreAjourAdherent/{{adherent.id}}">edité</a>
+                    <a href="/adherents/supprimerAdherent/{{ adherent.id }}">
+                        <button type="button" class="btn btn-outline-danger">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-trash" viewbox="0 0 16 16">
+								<path
+									d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z">
+								</path>
+								<path fill-rule="evenodd"
+									d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z">
+								</path>
+							</svg>
+							delete
+						</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+</div>{% endblock %}

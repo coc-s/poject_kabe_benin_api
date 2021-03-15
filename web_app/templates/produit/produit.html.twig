@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Controller!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="container">
+
+		<br>
+		<h1>Produit:
+		</h1>
+		<div class="row">
+
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-form-label" for="inputNom">Nom</label>
+							<input type="text" class="form-control" placeholder="Nom" id="inputNom">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="col-form-label" for="inputPrenom"></label>
+							<input type="text" class="form-control" placeholder="Prénom" id="inputPrenom">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+{% endblock %}

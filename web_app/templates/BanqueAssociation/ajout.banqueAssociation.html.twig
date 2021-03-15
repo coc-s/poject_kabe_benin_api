@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %} {% block title %}Hello GeoGouvController! {% endblock %} {% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px / 1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+
+    <br>
+    <br>
+    <br>
+    <h1>Ajout Banque Association:
+
+        <br>
+        <br>
+    </h1>
+    <div class="row">
+
+        <div class="col-md-12">
+            <form action="" method="POST" class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputDon" class="form-label">montant Don</label>
+                    <input type="float" required name="don" class="form-control" id="inputDon">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputDate" class="form-label">Date</label>
+                    <input type="date" required name="trip-start" class="form-control" id="start">
+
+                </div>
+
+                <div class="col-md-4"></div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Ajout</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GeoGouvController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<div class="container">
+	<br><br>
+		<form class="form-inline my-2 my-lg-0">
+			<fieldset>
+				<div class="form-group">
+					<select class="custom-select" name="code_region" id="code_region" onchange="this.form.submit()">
+						<option value="ToutesRegions">Toutes les Régions</option>
+                        {% for region in regions %}
+                            <option {% if selectedCodeRegion == region.code %}selected{% endif %}
+							 value="{{region.code}}">{{region.nom}}</option>
+                        {% endfor %}
+					
+					</select>           
+				</div>
+				<br>
+
+			</fieldset>
+		</form>
+		<br>
+		<h1>Liste departements :
+		</h1>
+		<div class="row">
+			{% for dep in departements %}
+
+				<div class="col-md-3">
+					<div class="card border-primary mb-3" style="max-width: 20rem;">
+						<div class="card-header">{{ dep.code }}</div>
+						<div class="card-body">
+							<h4 class="card-title">{{ dep.nom }}</h4>
+						
+						</div>
+					</div>
+				</div>
+
+			{% endfor %}
+		</div>
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %} {% block title %}Hello Controller! {% endblock %} {% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px / 1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+
+    <br>
+    <br>
+    <br>
+    <h1>Ajout utilisateur :
+
+        <br>
+        <br>
+    </h1>
+    <div class="row">
+
+        <div class="col-md-12">
+            <form action="" method="POST" class="row g-3">
+                <div class="col-md-6">
+                    <label for="inputNom" class="form-label">Nom</label>
+                    <input type="text" required name="nom" class="form-control" id="nom">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPrenom" class="form-label">Prenom</label>
+                    <input type="text" required name="prenom" class="form-control" id="prenom">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputDate" class="form-label">Date de naissance</label>
+                    <input type="date" required name="dateNaissance" class="form-control" id="date_naissance">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputSexe" class="form-label">E-mail</label>
+                    <input type="mail" required name="email" class="form-control" id="sexe">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputDate" class="form-label">Mot de passe</label>
+                    <input type="password" name="password" required class="form-control" id="password">
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Telephone</label>
+                    <input type="tel" required name="telephone" class="form-control" id="telephone" placeholder="">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputAdresse" class="form-label">Adresse</label>
+                    <input type="text" required name="adresse" class="form-control" id="adresse">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCodePostal" class="form-label">Code postal</label>
+                    <input type="text" required name="codePostal" class="form-control" id="code_postal">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputVille" class="form-label">Ville</label>
+                    <input type="text" required name="ville" class="form-control" id="ville">
+                </div>
+
+                <div class="col-md-4"></div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Ajout</button>
+            </form>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

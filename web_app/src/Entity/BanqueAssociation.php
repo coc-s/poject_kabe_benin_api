@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Entity;
+
+use App\Entity\Don;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+
+/**
+ * @ORM\Entity(repositoryClass=BanqueAssociationRepository::class)
+ */
+class BanqueAssociation
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     */
+    private $id;
+    
+        /**
+         * @ORM\ManyToOne(targetEntity=Don::class)
+         * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+         */
+        private $don;
+
+    /**
+     * @ORM\Column(type="float", nullable=true)
+     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     */
+    private $totalDons;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getTotalDons(): ?float
+    {
+        return $this->totalDons;
+    }
+
+    public function setTotalDons(?float $totalDons): self
+    {
+        $this->totalDons = $totalDons;
+
+        return $this;
+    }
+
+    public function getDon(): ?Don
+    {
+        return $this->don;
+    }
+
+    public function setDon(?Don $don): self
+    {
+        $this->don = $don;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of id
+
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+    }
+}

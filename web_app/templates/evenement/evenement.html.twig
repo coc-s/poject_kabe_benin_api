@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %} {% block title %}Hello GeoGouvController! {% endblock %} {% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px / 1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #F5F5F5;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+
+    <br>
+    <h1>Ajout :
+    </h1>
+    <div class="row">
+
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputEvenement">Evenement</label>
+                        <input type="text" class="form-control" placeholder="Evenement" id="inputEvenement">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-form-label" for="inputDate">Date</label>
+                        <input type="date" class="form-control" placeholder="Date" id="inputDate">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}
