@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %} {% block title %}Hello GeoGouvController! {% endblock %} {% block body %}
+<style>
+    .example-wrapper {
+        margin: 1em auto;
+        max-width: 800px;
+        width: 95%;
+        font: 18px / 1.5 sans-serif;
+    }
+    
+    .example-wrapper code {
+        background: #39ff08;
+        padding: 2px 6px;
+    }
+</style>
+
+<div class="container">
+    <br>
+    <h1>Liste Vente(s) :
+    </h1>
+    <br>
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-primary">
+
+                     <th scope="col">Id</th>
+                    <th scope="col">IdPhoto</th>
+                    <th scope="col">IdEvenement</th>
+                    <th scope="col">libellé produit</th>
+                    <th scope="col">description</th>
+                    <th scope="col">prix</th>
+                    <th scope="col">quantité</th>
+                    <th scope="col">disponibilité</th>
+                    <th scope="col">libellé évènement</th>
+                    <th scope="col">date évènement</th>
+
+
+                </tr>
+            </thead>
+            {% for vente in vente %}
+
+            <tr class="table-light">
+
+                    <td>{{ vente.id }}</td>
+                <th>{{ vente.produit.photo.id }}</th>
+                <th>{{ vente.produit.evenement.id }}</th>
+                <th>{{ vente.produit.libelle }}</th>
+                <th>{{ vente.produit.description }}</th>
+                <th>{{ vente.produit.prix }}</th>
+                <th>{{ vente.produit.quantite }}</th>
+                <th>{{ vente.produit.disponibilite }}</th>
+                <td>{{ vente.produit.evenement.libelle }}</td>
+                <th>{{ vente.produit.evenement.date|date('d-m-Y') }}</th>
+
+
+                <td>
+
+                    <a href="/ventes/mettreAjourVente/{{vente.id}}">Maj</a>
+                    <a href="/ventes/supprimerVente/{{ vente.id }}">
+                        <button type="button" class="btn btn-outline-danger">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-trash" viewbox="0 0 16 16">
+								<path
+									d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z">
+								</path>
+								<path fill-rule="evenodd"
+									d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z">
+								</path>
+							</svg>
+							delete
+						</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+</div>{% endblock %}

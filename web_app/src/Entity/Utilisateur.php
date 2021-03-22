@@ -16,59 +16,69 @@ class Utilisateur
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="date", nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $dateNaissance;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * 
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $telephone;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $adresse;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $codePostal;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $ville;
 
@@ -183,5 +193,16 @@ class Utilisateur
         $this->ville = $ville;
 
         return $this;
+    }
+
+    /**
+     * Set the value of id
+     *
+
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
     }
 }

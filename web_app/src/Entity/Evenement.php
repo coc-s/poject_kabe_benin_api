@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use App\Repository\EvenementRepository;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
@@ -16,18 +15,21 @@ class Evenement
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $libelle;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
+     * @ORM\Column(type="datetime", nullable=true)
      * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+     * 
      */
     private $date;
 
@@ -56,6 +58,18 @@ class Evenement
     public function setDate(?\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
 
         return $this;
     }

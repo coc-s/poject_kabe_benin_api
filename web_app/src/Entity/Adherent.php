@@ -57,7 +57,7 @@ class Adherent
         return $this->parrainage;
     }
 
-    public function setParrainage(?Parrainage $parrainage): self
+    public function setParrainage(?Parrainage $parrainage)
     {
         $this->parrainage = $parrainage;
 
@@ -69,7 +69,7 @@ class Adherent
         return $this->evenement;
     }
 
-    public function setEvenement(?Evenement $evenement): self
+    public function setEvenement(?Evenement $evenement)
     {
         $this->evenement = $evenement;
 
@@ -81,7 +81,7 @@ class Adherent
         return $this->utilisateur;
     }
 
-    public function setUtilisateur(?Utilisateur $utilisateur): self
+    public function setUtilisateur(?Utilisateur $utilisateur)
     {
         $this->utilisateur = $utilisateur;
 
@@ -93,7 +93,7 @@ class Adherent
         return $this->don;
     }
 
-    public function setDon(?Don $don): self
+    public function setDon(?Don $don)
     {
         $this->don = $don;
 
@@ -102,11 +102,13 @@ class Adherent
 
     /**
      * Set the value of id
-
+     *
+     * @return  self
      */ 
     public function setId($id)
     {
         $this->id = $id;
 
+        return $this;
     }
 }

@@ -2,10 +2,7 @@
 
 namespace App\Entity;
 
-use App\Entity\Photo;
 use Doctrine\ORM\Mapping as ORM;
-use App\Repository\ParrainageRepository;
-use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=ParrainageRepository::class)
@@ -16,58 +13,44 @@ class Parrainage
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     *  @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $nomEnfant;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     *  @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $prenomEnfant;
 
     /**
      * @ORM\Column(type="date", nullable=true)
-     *@Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $dateNaissEnfant;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     *  @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
-     * 
      */
     private $sexe;
 
     /**
      * @ORM\Column(type="date", nullable=true)
-     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $dateParrainage;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $ecole;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $village;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Photo::class)
-     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
-     */
-    private $photo;
 
     public function getId(): ?int
     {
@@ -158,14 +141,15 @@ class Parrainage
         return $this;
     }
 
-    public function getPhoto(): ?Photo
-    {
-        return $this->photo;
-    }
 
-    public function setPhoto(?Photo $photo): self
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
     {
-        $this->photo = $photo;
+        $this->id = $id;
 
         return $this;
     }

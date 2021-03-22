@@ -51,10 +51,10 @@ class Produit
      */
     private $disponibilite;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Photo::class)
-     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
-     */
+    // /**
+    //  * @ORM\ManyToOne(targetEntity=Photo::class)
+    //  * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+    //  */
     private $photo;
 
     /**
@@ -150,5 +150,15 @@ class Produit
         $this->evenement = $evenement;
 
         return $this;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 }

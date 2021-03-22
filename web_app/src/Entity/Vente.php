@@ -29,6 +29,7 @@ class Vente
 
     /**
      * @ORM\ManyToOne(targetEntity=Evenement::class)
+     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
      */
     private $evenement;
 
@@ -57,6 +58,18 @@ class Vente
     public function setEvenement(?Evenement $evenement): self
     {
         $this->evenement = $evenement;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
 
         return $this;
     }

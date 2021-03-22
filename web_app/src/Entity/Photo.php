@@ -35,4 +35,16 @@ class Photo
     {
         return $this->url;
     }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 }
