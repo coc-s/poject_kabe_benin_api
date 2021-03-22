@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+{% block title %}Inscription
+{% endblock %}
+{% block body %}
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+
+			<link rel="stylesheet" href="{{asset('css/Inscription.css')}}">
+
+		</head>
+
+		<body>
+
+			<form action="/action_page.php">
+				<div class="container">
+					<h1>Inscription</h1>
+					<b>Veuillez remplir ce formulaire pour créer un compte
+					</b>
+					<hr>
+
+					<label for="nom">
+						<b>Nom</b>
+					</label>
+					<input type="text" placeholder="Saisir nom" name="nom" required>
+
+					<label for="prenom">
+						<b>Prenom</b>
+					</label>
+					<input type="text" placeholder="Saisir prenom" name="prenom" required>
+
+					<label for="dateNaissance">
+						<b>Date de naissance</b>
+					</label>
+					<input type="date" id="dateNaissance" name="dateNaissance">
+					<br>
+					<br>
+					<label for="adresse">
+						<b>Adresse</b>
+					</label>
+					<input type="text" placeholder="Saisir numéro, rue, complément" name="rue" required>
+
+					<label for="cp">
+						<b>Code postal</b>
+					</label>
+					<input type="text" placeholder="Saisir code postal" name="cp" required>
+
+					<label for="ville">
+						<b>Ville</b>
+					</label>
+					<input type="text" placeholder="Saisir ville" name="ville" required>
+
+					<label for="telephone">
+						<b>Telephone</b>
+					</label>
+					<input type="text" placeholder="Saisir telephone" name="telephone" required>
+
+					<label for="email">
+						<b>Email</b>
+					</label>
+					<input type="text" placeholder="Saisir Email" name="email" required>
+
+					<label for="psw">
+						<b>Mot de passe</b>
+					</label>
+					<input type="password" placeholder="Saisir mot de passe" name="psw" required>
+
+					<label for="psw-repeat">
+						<b>Confirmer mot de passe</b>
+					</label>
+					<input type="password" placeholder="Confirmer mot de passe" name="psw-repeat" required>
+
+					<label>
+						<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+						Se souvenir de moi
+					</label>
+
+					<b>En créant un compte, vous acceptez nos conditions et notre
+						<a href="#" style="color:dodgerblue">conditions et notre confidentialité.</a>.</b>
+
+
+					<button type="submit" class="registerbtn">Valider</button>
+				</div>
+
+				<div class="container signin">
+					Déjà inscrit?
+					<a button onclick="href='/connexions'" value="connexion" value="connexion">S'identifier</a>
+					<br>
+					<br>
+					<button type="submit" button onclick="href='/accueils'" class="p">Retour</button>
+
+				</div>
+			</form>
+
+		</body>
+	</html>
+{% endblock %}

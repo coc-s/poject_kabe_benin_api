@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}{% block title %}Ventes
+{% endblock %}
+{% block body %}
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+
+			<link rel="stylesheet" href="{{asset('css/Ventes.css')}}">
+
+		</head>
+
+		<body>
+        
+<br>
+<h1>Livre : "Maya, un destin hors du commun"</h1>
+<br>
+
+<article>
+<p>La fondatrice de l'Association Kabé Bénin, Mariam DAMAGEUX (surnommée "Maya"), raconte son histoire.</p>
+<p>Celle de son enfance au nord du Bénin à son arrivée en France...</p>
+<p> Les dons récoltés par le vente de ce livre sont bien évidemment reversés à l'association et le financement des projets développés dans la région de Kabé.</p>
+</article>
+<br>
+<br>
+<br>
+<br>
+ <!-- Animation livre -->
+<fieldset>
+<div class="component">
+    <ul class="align">
+        <li>
+            <figure class='book'>
+
+                <!-- Front -->
+
+                <ul class='hardcover_front'>
+                    <li>
+                        <div class="coverDesign blue">
+                            <h1>Maya </h1>
+                            <p>Un destin hors du commun </p>
+                        </div>
+                    </li>
+                    <li></li>
+                </ul>
+
+                <!-- Pages -->
+
+                <ul class='page'>
+                    <li></li>
+                    <li>
+                        <a class="btn" href="#">Acheter</a>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <!-- Back -->
+
+                <ul class='hardcover_back'>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class='book_spine'>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <figcaption>
+                    <h1>Achetez le livre</h1>
+                    <span>18,50€</span>
+                    <p>"Un beau geste pour l'Association et un beau cadeau à conserver ou à offrir "</p>
+
+                </figcaption>
+            </figure>
+        </li>
+    </ul>
+</div>
+</fieldset>
+    <br>
+    <br>
+<h2> Informations sur le livre et aperçus :  </h2> 
+
+
+
+
+<img src="images/Ventes/origineProjet.jpg" alt="vente" class="origine"style="width:50%">
+<div id="conteneur">
+<img src="images/Ventes/livre1.jpg" alt="vente" class="livre"style="width:40%">
+<img src="images/Ventes/livre2.jpg" alt="vente" class="livres"style="width:40%">
+</div>
+<div id="conteneur">
+<img src="images/Ventes/livre3.jpg" alt="vente" class="livre"style="width:40%">
+<img src="images/Ventes/livre4.jpg" alt="vente" class="livres"style="width:40%">
+</div>
+
+
+
+
+           </body>
+	</html>
+{% endblock %}

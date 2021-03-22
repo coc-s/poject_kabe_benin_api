@@ -35,14 +35,15 @@
                 <tr class="table-primary">
 
                     <th scope="col">Id</th>
-                    <th scope="col">utilisateur</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Date de naissance</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Téléphone</th>
+                    <th scope="col">Adresse</th>
+                    <th scope="col">Code postal</th>
+                     <th scope="col">Ville </th>
+             
                 </tr>
             </thead>
             {% for admin in paginator.data %}
@@ -50,10 +51,10 @@
             <tr class="table-light">
 
                 <td>{{ admin.id }}</td>
-                <th>{{ admin.utilisateur.nom }}</th>
-                <th>{{ admin.utilisateur.prenom }}</th>
-                <th>{{ admin.utilisateur.dateNaissance|date('d-m-Y') }}</th>
-                <th>{{ admin.utilisateur.email }}</th>
+                <td>{{ admin.utilisateur.nom }}</td>
+                <td>{{ admin.utilisateur.prenom }}</td>
+                <td>{{ admin.utilisateur.dateNaissance|date('d-m-Y') }}</td>
+                <td>{{ admin.utilisateur.email }}</td>
                 <td>{{ admin.utilisateur.telephone }}</td>
                 <td>{{ admin.utilisateur.adresse }}</td>
                 <td>{{ admin.utilisateur.codePostal }}</td>

@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %} {% block title %}Accueil {% endblock %} {% block body %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+    <link rel="stylesheet" href="{{asset('css/Accueil.css')}}">
+	
+
+
+<h1>Association Kabé-Bénin</h1>
+    <br>
+    <img id="myImg01" src="images/Accueil/cadreAccueil1.jpg" class="photo" style="width:100%;max-width:400px">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg01");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <p>
+        <br>L'association Kabé - Bénin a été fondée en Juillet 2002, à Loos-en-Gohelle dans la Pas-de-Calais et compte aujourd'hui environ 80 membres.<br>
+        <br> Elle a été créée à l'initiative de Mariam Damageux, qui est peule, originaire du Bénin, et qui vit en France.<br>
+        <br>En nous parlant de la vie et des problèmes rencontrés par les habitants du village de Kabé,<br>
+        <br> nous avons décidé de fonder cette association afin de pouvoir leur apporter une aide efficace.<br>
+        <br>
+    </p>
+
+    <br>
+    <img id="myImg02" src="images/Accueil/cadreAccueil2.jpg" class="photo" style="width:100%;max-width:400px">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg02");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+
+    <br>
+
+    <p>
+        <br> Nos premiers objectifs étaient d'apporter un soutien à ce village, afin que les habitants puissent accéder à l'éducation et développer leurs activités et sortir de leur isolement.<br>
+        <br>Aujourd'hui nous travaillons également avec les communes avoisinantes (dont Guéné, le chef lieu d'arrondissement), pour faciliter l'accès aux soins, améliorer les conditions de vie et d'hygiène, aider les habitants à diversifier leurs activités.<br>
+        <br>Notre intention est que la gestion des structures et services dont nous participons à la mise en place soit organisée par des collectifs d'habitants, de manière autonome. De plus chacune de nos actions se fait en collaboration étroite avec
+        les différentes structures sociales et administratives ainsi que les représentants locaux.<br>
+        <br>
+    </p>
+
+    <br>
+    <img id="myImg03" src="images/Accueil/cadreAccueil3.jpg"class="photo" alt="photo3" style="width:100%;max-width:400px">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg03");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+    <br>
+
+    <p>
+        <br>
+        <br>Lors de nos différents déplacements, nous avons pu créer sur place un réseau de relations (représentants de village, collectifs, ...) avec qui communiquer depuis la France afin de faire progresser nos projets.<br>
+        <br>L'engagement de ces personnes à nos côtés est nécessaire pour travailler main dans la main avec les habitants et assurer la pérennité de nos actions en notre absence.<br>
+        <br>De solides liens d'échange ont été créés avec les villages qui s'impliquent avec enthousiasme dans chacun de nos projets.<br>
+        <br>
+    </p>
+
+
+
+</body>
+
+</html>
+{% endblock %}

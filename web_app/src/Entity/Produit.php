@@ -2,8 +2,8 @@
 
 namespace App\Entity;
 
-use App\Entity\Photo;
-use App\Entity\Evenement;
+// use App\Entity\Photo;
+// use App\Entity\Evenement;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ProduitRepository;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -55,13 +55,13 @@ class Produit
     //  * @ORM\ManyToOne(targetEntity=Photo::class)
     //  * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
     //  */
-    private $photo;
+    // private $photo;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Evenement::class)
-     * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
-     */
-    private $evenement;
+    // /**
+    //  * @ORM\ManyToOne(targetEntity=Evenement::class)
+    //  * @Groups({"listAdherentSimple","listAdherentFull","PaginationAdherent"})
+    //  */
+    // private $evenement;
 
     public function getId(): ?int
     {
@@ -128,29 +128,29 @@ class Produit
         return $this;
     }
 
-    public function getPhoto(): ?Photo
-    {
-        return $this->photo;
-    }
+    // public function getPhoto(): ?Photo
+    // {
+    //     return $this->photo;
+    // }
 
-    public function setPhoto(?Photo $photo): self
-    {
-        $this->photo = $photo;
+    // public function setPhoto(?Photo $photo): self
+    // {
+    //     $this->photo = $photo;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function getEvenement(): ?Evenement
-    {
-        return $this->evenement;
-    }
+//     public function getEvenement(): ?Evenement
+//     {
+//         return $this->evenement;
+//     }
 
-    public function setEvenement(?Evenement $evenement): self
-    {
-        $this->evenement = $evenement;
+//     public function setEvenement(?Evenement $evenement): self
+//     {
+//         $this->evenement = $evenement;
 
-        return $this;
-    }
+//         return $this;
+//     }
 
     /**
      * Set the value of id

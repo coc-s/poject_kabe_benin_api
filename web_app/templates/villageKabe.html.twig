@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block title %}Village Kabé
+{% endblock %}
+{% block body %}
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+
+			<link rel="stylesheet" href="{{asset('css/VillageKabe.css')}}">
+		</head>
+
+		<body>
+			
+			<div id="conteneur">
+
+				<div><img src="images/Village/centre_sante.jpg" alt="kabe" class="village">
+					<br>
+					<img src="images/Village/hutte.jpg" alt="kabe" class="kabe">
+					<br>
+					<img src="images/Village/vache-benin.jpg" alt="kabe" class="kabe">
+					<img src="images/Village/FemmeVillage.jpg" alt="kabe" class="kabe">
+				</div>
+				<br>
+				<div>
+					<h1>Le village de Kabé</h1>
+
+					<p>
+						<br>Kabé regroupe environ 300 habitants peuls de tradition nomade, vivant essentiellement de l’élevage de leurs troupeaux de vaches et de la culture du mil.<br>
+						<br>
+						Le village est situé près d’un cours d’eau et possède un puits ainsi que des terres cultivables.<br>
+						<br>
+						Ces conditions ont incité les Peuls à se sédentariser, chaque famille construisant son campement.<br>
+						<br>
+						Kabé se situe à 9 km de Guéné, petite ville où l’on peut trouver quelques commerçants, un marché chaque Jeudi, ainsi qu’un dispensaire.<br>
+						<br>
+						Il faut ensuite parcourir 30 km pour arriver à Malanville, sous-préfecture de la région, où se situe l’hôpital, le téléphone, la poste…
+						<br>
+						<br>
+						L’isolement du village est donc un problème dans la vie quotidienne : il faut se rendre à Guéné, à pied; la route n’est pas praticable par un taxi lorsqu’il est nécessaire de transporter un malade …<br>
+						<br>
+						La langue peule est minoritaire dans la région où le dendi est le plus parlé ; quant au français, langue officielle, les anciens ne la connaissent pas, n’ayant pas été scolarisés.
+						<br>
+						<br>
+						La barrière de la langue est un handicap majeur pour les habitants puisqu’ils ont beaucoup de difficultés à défendre leurs intérêts.
+						<br>
+						<br>
+						En effet, certaines populations avoisinantes ont tendance à profiter de leur ignorance pour les démunir de leurs terres ou s’enrichir de taxes non réglementaires.<br>
+						<br>
+						Ainsi l’alphabétisation est un enjeu important pour donner au village la possibilité de se développer, et aux Peuls l’occasion de mieux s’intégrer à la population locale.<br>
+						<h3>
+							Actuellement, nous sommes très étonnés, agréablement, d’entendre les plus jeunes parler le français !</h3>
+					</p>
+                                  <img src="images/Village/carteKabe2.jpg" alt="kabe" class="carte">
+
+				</div>
+				<br>
+			</div>
+
+
+			<br>
+			<br>
+			<br>
+			<h2>
+				google maps : guéné et malanville</h2>
+			<div id="conteneur">>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d249945.28402834685!2d3.3015630419746183!3d11.807580224513625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1614848271619!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+
+		</body>
+	</html>
+{% endblock %}

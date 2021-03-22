@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+{% block title %}Projets
+{% endblock %}
+{% block body %}
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+
+			<link rel="stylesheet" href="{{asset('css/Projet.css')}}">
+
+		</head>
+
+		<body>
+
+<img src="images/Projets/nosProjets.png" alt="kabe" class="nosProjets">
+    <img src="images/Projets/GIFmacon.webp" alt="kabe" class="gifmacon">
+
+    <br>
+    <br>
+    <fieldset class="article">
+        <article>
+
+            <p>L'Association Kabé Bénin s'efforce d'améliorer le quotidien des habitants de Kabé et sa région.</p>
+            <p>L’axe principal de nos actions est le fonctionnement de l’école car l’alphabétisation est aujourd’hui une urgence pour les habitants.</p>
+            <p>La première année nous avons apporté notre aide à l’entretien de l’école, de la cantine et investi dans l’équipement scolaire.</p>
+            <p>Le premier grand projet a été la reconstruction de l’école. Puis un logement pour accueillir le nouveau du directeur de l’école (nommé par le ministère) et un 2ème bâtiment de 2 classes.</p>
+            <p> Nous avons par ailleurs financé 5 moulins à grain, un centre de santé, un centre d’hébergement pour les collégiens à Guéné, une salle de restauration auprès de la cantine, un logement pour l’infirmière et deux salles de garderie maternelle
+                à Guéné et dans le secteur de Kabé pour les enfants de 2 à 6 ans (176 inscrits ) et enfin l’électrification du centre de santé par panneaux solaires et du centre d'hébergement.</p>
+            <p> Nous souhaitons aider le village à se développer dans son ensemble et aider les habitants à diversifier leurs activités (maraîchage et nettoyage dans les villages) . Notre intention est que la gestion des structures et services du village
+                soient organisés par les habitants, de manière autonome, par le biais d’une coopérative.</p>
+            <p> Nous travaillons à la réalisation de 2 forages et dans l'avenir à améliorer la piste entre Guéné et Kabé et à aménager le bas fond à Kabé. Cela nous demandera encore des efforts et surtout de la solidarité sans laquelle nous ne pouvons pas
+                faire toutes ces réalisations.
+
+        </article>
+        <br>
+        <img src="images/Projets/merciAtous.png" alt="kabe" class="merci">
+        <img src="images/Projets/GIFchantier.gif" alt="kabe" class="gifchantier">
+
+    </fieldset>
+    <br>
+    <br>
+    <fieldset class="photo">
+        <img src="images/Projets/projetsRealises.png" alt="kabe" class="projet"> </div>
+        <br>
+        <br>
+        <br>
+        <img class="mySlides" src="images/Projets/centre_hebergement.jpg" style="width:50%">
+        <img class="mySlides" src="images/Projets/centre_medical.jpg" style="width:50%">
+        <img class="mySlides" src="images/Projets/chateau_d_eau.jpg" style="width:30%">
+        <img class="mySlides" src="images/Projets/ecole_kabe.jpg" style="width:50%">
+        <img class="mySlides" src="images/Projets/eclerage2.jpg" style="width:30%">
+        <img class="mySlides" src="images/Projets/forage.jpg" style="width:30%">
+        <img class="mySlides" src="images/Projets/forage2.jpg" style="width:50%">
+        <br>
+        <br>
+    </fieldset>
+    </div>
+
+    <script>
+        /*diaporama qui défile*/
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 2 seconds
+
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+        </body>
+	</html>
+{% endblock %}

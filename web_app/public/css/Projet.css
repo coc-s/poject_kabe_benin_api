@@ -1,0 +1,73 @@
+#conteneur {
+    display: flex;
+}
+
+body {
+    background-color: #DCDCDC;
+}
+
+h1 {
+    font-family: 'planet_benson_2regular';
+    text-align-last: center;
+    vertical-align: middle;
+    font-size: 35pt;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 2px solid black;
+    background: linear-gradient(green, yellow, red);
+    margin-left: 34%;
+    margin-right: 34%;
+}
+
+h2 {
+    color: rgb(233, 84, 15);
+}
+
+.gifmacon {
+    margin-left: 45%;
+}
+
+.gifchantier {
+    margin-left: 75%;
+}
+
+.merci {
+    margin-left: 35%;
+}
+
+.nosProjets {
+    margin-top: 5%;
+    margin-left: 35%;
+}
+
+.projet {
+    margin-left: 40%;
+}
+
+.article {
+    background-color: white;
+}
+
+@font-face {
+    font-family: 'planet_benson_2regular';
+    src: url('../MesPolices/planetbe-webfont.eot');
+    src: url('../MesPolices/planetbe-webfont.eot?#iefix') format('embedded-opentype'), url('../MesPolices/planetbe-webfont.woff') format('woff'), url('../MesPolices/planetbe-webfont.ttf') format('truetype'), url('../MesPolices/planetbe-webfont.svg#planet_benson_2regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+article {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.mySlides {
+    margin-left: 25%;
+    display: none;
+}
+
+.photo {
+    background: black;
+}
