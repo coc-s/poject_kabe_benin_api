@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class ProduitService {
 
-  constructor() { }
+  save(produit: any) {
+
+    return this.httpClient.post('http://localhost:8000/api/produits', produit);
+
+  }
+
+    constructor(private httpClient : HttpClient) { }
 }

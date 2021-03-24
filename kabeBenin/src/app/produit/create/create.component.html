@@ -1,1 +1,57 @@
-<p>create works!</p>
+<form [formGroup]="produitForm">
+
+    <div class="container">
+        <h1>Produit</h1>
+        <b>Présentation de produits venus tout droit du Bénin 
+        </b>
+        <hr>
+
+        <label for="libelle">
+            <b>Libelle</b>
+        </label>
+        <input type="text" placeholder="libelle" name="libelle" required formControlName="libelle">
+
+        <label for="description">
+            <b>Description</b>
+        </label>
+        <input type="text" placeholder="Description du produit" name="description" required formControlName="description">
+
+        <label for="prix">
+            <b>Prix</b>
+        </label>
+        <input type="text" id="prix" name="prix" formControlName="prix">
+        <br>
+        <br>
+        <label for="quantite">
+            <b>Quantité</b>
+        </label>
+        <input type="text" placeholder="Saisir la quantité" name="quantite" required formControlName="quantite">
+
+        <label for="disponibilite">
+            <b>Disponibilité</b>
+        </label>
+        <input type="text" name="disponibilite" required formControlName="disponibilite">
+
+        <label for="photo">
+            <b>Photo</b>
+        </label>
+        <input type="text"name="photo" required formControlName="photo">
+
+        <label for="evenement">
+            <b>Evenement</b>
+        </label>
+        <input type="text"  name="evenement" required formControlName="evenement">
+
+
+
+        <button type="submit" class="registerbtn" (click)="save()">Valider</button>
+    </div>
+        <br>
+        <br>
+        <button type="submit " button onclick="href='/accueils' " class="p ">Retour</button>
+
+    
+
+
+
+</form>

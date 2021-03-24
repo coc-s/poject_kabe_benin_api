@@ -11,13 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
 import { ParrainageService } from './service/parrainage.service';
 import { CreateParrainageComponent } from './parrainage/create/create.component';
+import { CreateProduitComponent } from './produit/create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InterfaceLoginComponent,
     CreateComponent, 
-    CreateParrainageComponent 
+    CreateParrainageComponent ,
+    CreateProduitComponent
   ],
   imports: [
     BrowserModule,
