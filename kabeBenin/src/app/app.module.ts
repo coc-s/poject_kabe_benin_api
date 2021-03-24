@@ -10,12 +10,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
 import { ParrainageService } from './service/parrainage.service';
+import { CreateParrainageComponent } from './parrainage/create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InterfaceLoginComponent,
-    CreateComponent,  
+    CreateComponent, 
+    CreateParrainageComponent 
   ],
   imports: [
     BrowserModule,
