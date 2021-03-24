@@ -9,12 +9,13 @@ import { CreateComponent } from './utilisateurs/create/create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
+import { ParrainageService } from './service/parrainage.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     InterfaceLoginComponent,
-    CreateComponent
+    CreateComponent,  
   ],
   imports: [
     BrowserModule,
@@ -23,7 +24,11 @@ import { UserService } from './service/user.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [
+  UserService,
+  ParrainageService
+],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

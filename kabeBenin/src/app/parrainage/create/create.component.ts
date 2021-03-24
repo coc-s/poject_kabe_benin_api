@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ParrainageService } from 'src/app/service/parrainage.service';
 
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss']
 })
-export class CreateComponent implements OnInit {
-userForm: FormGroup;
+export class CreateParrainageComponent implements OnInit {
+public parrainageForm: FormGroup;
 
-  constructor(private fb : FormBuilder) { }
+  constructor(private fb: FormBuilder, private parrainageService: ParrainageService ) { }
 
   ngOnInit(): void {
-    this.userForm=this.fb.group({
+    this.parrainageForm=this.fb.group({
 
       nomEnfant: '',
       prenomEnfant: '',
@@ -20,10 +21,26 @@ userForm: FormGroup;
       sexe: '',
       dateParrainage: '',
       ecole: '',
-      village: ''
+      village: '',
+      photo: ''
     })
 
     
+  }
+  save() {
+
+
+    let values = this.parrainageForm.value
+    console.log(values)
+    this.parrainageService.save(values).subscribe(
+
+      () => '',
+      () => '',
+      () => alert('User has been add successfully')
+    );
+
+
+
   }
 
 }
