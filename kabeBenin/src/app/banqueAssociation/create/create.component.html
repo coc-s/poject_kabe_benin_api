@@ -1,1 +1,16 @@
-<p>create works!</p>
+<form [formGroup]="banqueAssociationForm">
+    <!-- <form action="" method="POST" class="row g-3"> -->
+
+    <div class="col-md-6">
+        <label for="inputtotalDons" class="form-label">Nom de l'enfant</label>
+        <input type="text" required name="totalDons" required formControlName="totalDons">
+    </div>
+
+    <div>
+        <button type="submit" class="registerbtn" (click)="save()">Valider</button>
+    </div>
+    <br>
+    <br>
+    <button type="submit " button onclick="href='/accueils' " class="p ">Retour</button>
+
+</form>
