@@ -1,0 +1,135 @@
+<app-menu-accueil></app-menu-accueil>
+<h1> évènements </h1>
+
+<fieldset>
+    <div id="conteneur">
+
+        <div>
+            <img id="myImg01" src="images/Evenements/SandaAbdoulaye.jpg" class="evenement" style="width:100%;max-width:400px">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementById("myImg01");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                img.onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                }
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+            </script>
+
+        </div>
+        <br>
+
+
+        <div>
+
+            <article>
+                <h4> samedi 20 février 2021</h4>
+
+                <h2> Sanda ABDOULAYE diplômé ! </h2>
+
+                <p> Sanda Abdoulaye a reçu son diplôme le 20 février 2021.<br>
+
+                    <br> Il a suivi une formation en agroécologie au centre SONGHAÏ de Parakou.<br>
+
+                    <br> Félicitations et bravo à lui, les membres de l'association Kabé Bénin sont <br>
+
+                    <br> vraiment fiers de ces jeunes qui sont bien motivés pour leur réussite. <br>
+
+                    <br> Surtout ils cherchent l'autonomie. Ce qui est très important pour l'association.<br>
+
+                    <br> Et le but est de les voir heureux et autonomes. <br>
+
+                    <br> Un grand merci à vous qui soutenez l'association Kabé Bénin : c'est grâce à vous tous !<br>
+                </p>
+            </article>
+
+        </div>
+        <div> <img src="images/Evenements/Bravo.gif" alt="banniere" class="gif"> </div>
+    </div>
+</fieldset>
+<br>
+<br>
+<fieldset>
+
+    <div id="conteneur">
+
+        <div>
+            <img id="myImg02" src="images/Evenements/SahadouAllou.jpg" class="evenement" style="width:100%;max-width:400px">
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementById("myImg02");
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                img.onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                }
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+            </script>
+        </div>
+        <br>
+        <div>
+
+            <article>
+
+                <h4> samedi 20 février 2021</h4>
+
+                <h2> Sahadou ALLOU diplômé ! </h2>
+
+                <p> Sahadou Allou vient de décrocher son diplôme d'infirmier à l'Institut Koubeini de Gaya, 2021.<br>
+
+                    <br> Félicitations à lui. Nous sommes très heureux et surtout pour la population <br>
+
+                    <br> de la région de Guéné qui a besoin de jeunes bien motivés et qualifiés pour la santé.<br>
+
+                    <br> Bravo à vous tous, les jeunes, continuez comme ça et tout ira mieux grâce à Dieu. <br>
+
+                    <br> Les membres de l'association Kabé Bénin de France sont très fiers de vous tous.<br>
+                </p>
+
+            </article>
+        </div>
+        <div> <img src="images/Evenements/Bravo.gif" alt="banniere" class="gif"> </div>
+
+    </div>
+</fieldset>
