@@ -1,0 +1,30 @@
+<form [formGroup]="evenementForm">
+
+    <div class="container">
+        <h1>Evènement</h1>
+        <b>Présentation des évènements 
+        </b>
+        <hr>
+
+        <label for="libelle">
+            <b>Libelle</b>
+        </label>
+        <input type="text" placeholder="libelle" name="libelle" required formControlName="libelle">
+
+        <label for="date">
+            <b>Description</b>
+        </label>
+        <input type="text" placeholder="date de l'évènement" name="date" required formControlName="date">
+
+        
+        <button type="submit" class="registerbtn" (click)="save()">Valider</button>
+    </div>
+        <br>
+        <br>
+        <button type="submit " button onclick="href='/accueils' " class="p ">Retour</button>
+
+    
+
+
+
+</form>
