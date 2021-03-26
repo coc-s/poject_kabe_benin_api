@@ -1,8 +1,6 @@
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { EvenementService } from 'src/app/service/evenement.service';
-
+import { DonService } from 'src/app/service/don.service';
 
 
 
@@ -11,14 +9,14 @@ import { EvenementService } from 'src/app/service/evenement.service';
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.scss']
 })
-export class CreateEvenementComponent implements OnInit {
-evenementForm: FormGroup;
+export class CreateDonComponent implements OnInit {
+donForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private evenementService: EvenementService) { }
+  constructor(private fb: FormBuilder, private donService: DonService) { }
 
   ngOnInit(): void {
-    this.evenementForm=this.fb.group({
-      libelle: '',
+    this.donForm=this.fb.group({
+      montant: '',
       date: ''
 
     })
@@ -27,9 +25,9 @@ evenementForm: FormGroup;
   save() {
 
 
-    let values = this.evenementForm.value
+    let values = this.donForm.value
     console.log(values)
-    this.evenementService.save(values).subscribe(
+    this.donService.save(values).subscribe(
 
       () => '',
       () => '',
@@ -40,3 +38,6 @@ evenementForm: FormGroup;
 
 
 }
+
+
+

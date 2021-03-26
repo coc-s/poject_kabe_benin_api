@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
 import { CreateEvenementComponent } from './evenement/create/create.component';
 import { EvenementService } from './service/evenement.service';
+import { CreateDonComponent } from './don/create/create.component';
+import { DonService } from './service/don.service';
+
 
 
 @NgModule({
@@ -18,7 +21,8 @@ import { EvenementService } from './service/evenement.service';
     AppComponent,
     InterfaceLoginComponent,
     CreateComponent, 
-    CreateEvenementComponent
+    CreateEvenementComponent,
+    CreateDonComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { EvenementService } from './service/evenement.service';
   ],
   providers: [
   UserService,
-  EvenementService
+  EvenementService,
+  DonService
 
 ],
 

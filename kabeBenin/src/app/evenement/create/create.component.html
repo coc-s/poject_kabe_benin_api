@@ -2,7 +2,7 @@
 
     <div class="container">
         <h1>Evènement</h1>
-        <b>Présentation des évènements </b>
+        <b>Saisie des évènements </b>
         <hr>
 
         <label for="libelle">
@@ -11,10 +11,11 @@
         <input type="text" placeholder="libelle" name="libelle" required formControlName="libelle">
 
         <label for="date">
-            <b>Description</b>
+            <b>Date</b>
         </label>
-        <input type="text" placeholder="date de l'évènement" name="date" required formControlName="date">
-
+        <input type="date" placeholder="date de l'évènement" name="date" required formControlName="date">
+        <br>
+        <br>
         
         <button type="submit" class="registerbtn" (click)="save()">Valider</button>
     </div>

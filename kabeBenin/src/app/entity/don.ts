@@ -13,10 +13,6 @@ export class Don {
         this.id = id;
         this.montant = montant;
         this.date = date;
-
-
-
-
-                        }
+  }
 
     }
