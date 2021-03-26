@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InterfaceLoginComponent } from './interface-login/interface-login.component';
-import { CreateComponent } from './utilisateurs/create/create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './service/user.service';
@@ -17,6 +16,7 @@ import { ProjetHumanitaireService } from './service/projet-humanitaire.service';
 import { CreateBanqueAssociationComponent } from './banqueAssociation/create/create.component';
 import { BanqueAssociationService } from './service/banque-association.service';
 import { ProduitService } from './service/produit.service';
+import { CreateComponent } from './utilisateurs/create/create.component';
 
 @NgModule({
   declarations: [
