@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ParrainageService } from 'src/app/service/parrainage.service';
 
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -21,8 +22,7 @@ public parrainageForm: FormGroup;
       sexe: '',
       dateParrainage: '',
       ecole: '',
-      village: '',
-      photo: ''
+      village: ''
     })
 
     

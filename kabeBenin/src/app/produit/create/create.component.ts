@@ -22,8 +22,8 @@ produitForm: FormGroup;
       description: '',
       prix: '',
       quantite: '',
-      disponibilite: '',
-      photo: ''
+      disponibilite: ''
+      //photo: ''
 
     })
 
@@ -35,8 +35,8 @@ produitForm: FormGroup;
     console.log(values)
     this.produitService.save(values).subscribe(
 
-      () => '',
-      () => '',
+      () => 'qdjgelglealjn',
+      () => 'lfekaielhfma',
       () => alert('User has been add successfully')
     );
 

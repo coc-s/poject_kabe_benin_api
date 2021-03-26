@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CreateBanqueAssociationComponent } from './create.component';
 
-describe('CreateComponent', () => {
+describe('CreateBanqueAssociationComponent', () => {
   let component: CreateBanqueAssociationComponent;
   let fixture: ComponentFixture<CreateBanqueAssociationComponent>;
 

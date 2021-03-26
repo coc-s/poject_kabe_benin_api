@@ -16,6 +16,7 @@ import { CreateProjetHumanitaireComponent } from './projet-humanitaire/create/cr
 import { ProjetHumanitaireService } from './service/projet-humanitaire.service';
 import { CreateBanqueAssociationComponent } from './banqueAssociation/create/create.component';
 import { BanqueAssociationService } from './service/banque-association.service';
+import { ProduitService } from './service/produit.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BanqueAssociationService } from './service/banque-association.service';
   providers: [
   UserService,
   ParrainageService,
+  ProduitService,
   ProjetHumanitaireService,
   BanqueAssociationService
 
