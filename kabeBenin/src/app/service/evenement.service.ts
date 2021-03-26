@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -6,12 +7,12 @@ import { Injectable } from '@angular/core';
 })
 export class EvenementService {
 
-  save(evenement: any) {
 
-    return this.httpClient.post('http://localhost:8000/api/evenements', evenement);
+  save(evenement: any){
+
+
+    return this.httpClient.post('http://localhost:8000/api/evenements',evenement);
 
   }
-
-    constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
 }
-

@@ -14,9 +14,6 @@ export class Evenement {
         this.libelle = libelle;
         this.date = date;
 
-
-
-
-                        }
+   }
 
     }
