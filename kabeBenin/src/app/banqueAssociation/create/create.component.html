@@ -1,1 +1,22 @@
-<p>create works!</p>
+<form [formGroup]="banqueAssociationForm">
+
+        <div class="container">
+            <h1>Banque Association</h1>
+            <b>Venez nous apporter votre frique !!!! Donnez donnez dooooonner 
+            </b>
+            <hr>
+        </div>
+
+    <div class="col-md-6">
+        <label for="inputtotalDons" class="form-label">Total des dons</label>
+        <input type="text" required name="totalDons" required formControlName="totalDons">
+    </div>
+
+    <div>
+        <button type="submit" class="registerbtn" (click)="save()">Valider</button>
+    </div>
+    <br>
+    <br>
+    <button type="submit " button onclick="href='/accueils' " class="p ">Retour</button>
+
+</form>

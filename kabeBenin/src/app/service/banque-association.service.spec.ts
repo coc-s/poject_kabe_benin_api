@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { BanqueAssociationService } from './banque-association.service';
 
 describe('BanqueAssociationService', () => {
