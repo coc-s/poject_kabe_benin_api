@@ -12,6 +12,11 @@ import { UserService } from './service/user.service';
 import { ParrainageService } from './service/parrainage.service';
 import { CreateParrainageComponent } from './parrainage/create/create.component';
 import { CreateProduitComponent } from './produit/create/create.component';
+import { CreateProjetHumanitaireComponent } from './projet-humanitaire/create/create.component';
+import { ProjetHumanitaireService } from './service/projet-humanitaire.service';
+import { CreateBanqueAssociationComponent } from './banqueAssociation/create/create.component';
+import { BanqueAssociationService } from './service/banque-association.service';
+import { ProduitService } from './service/produit.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,9 @@ import { CreateProduitComponent } from './produit/create/create.component';
     InterfaceLoginComponent,
     CreateComponent, 
     CreateParrainageComponent ,
-    CreateProduitComponent
+    CreateProduitComponent,
+    CreateProjetHumanitaireComponent,
+    CreateBanqueAssociationComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,11 @@ import { CreateProduitComponent } from './produit/create/create.component';
   ],
   providers: [
   UserService,
-  ParrainageService
+  ParrainageService,
+  ProduitService,
+  ProjetHumanitaireService,
+  BanqueAssociationService
+
 ],
 
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@ export class Produit {
     prix: Float32Array;
     quantite: boolean;
     disponibilite: string;
-    photo: string;
+  //  photo: string;
 
 
 
@@ -15,8 +15,8 @@ export class Produit {
         description: string,
         prix: Float32Array,
         quantite: boolean,
-        disponibilite: string,
-        photo: string) {
+        disponibilite: string) { 
+     //   photo: string) {
 
         this.id = id;
         this.libelle = libelle;
@@ -24,7 +24,7 @@ export class Produit {
         this.prix = prix;
         this.quantite = quantite;
         this.disponibilite = disponibilite;
-        this.photo = photo;
+       // this.photo = photo;
 
 
 

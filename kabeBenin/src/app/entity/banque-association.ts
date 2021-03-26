@@ -1,9 +1,20 @@
+import { isConstructorDeclaration } from "typescript";
+
 export class BanqueAssociation {
     id: number;
     totalDons: Float32Array;
 // $don 
 
+constructor(id: number,
+    totalDons: Float32Array){
+        this.id = id;
+        this.totalDons = totalDons;
+
+    } 
+
 }
+
+
 
 
 
