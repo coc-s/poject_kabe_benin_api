@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { UserService } from 'src/app/service/user.service';
+import { UserService } from '../service/user.service';
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss']
+  selector: 'app-inscription',
+  templateUrl: './inscription.component.html',
+  styleUrls: ['./inscription.component.scss']
 })
-export class CreateComponent implements OnInit {
-userForm: FormGroup;
+export class InscriptionComponent implements OnInit {
+
+  userForm: FormGroup;
   constructor(private fb : FormBuilder,private userService: UserService) { }
 
   ngOnInit(): void {

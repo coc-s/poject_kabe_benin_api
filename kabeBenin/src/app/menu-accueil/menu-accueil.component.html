@@ -1,0 +1,65 @@
+<div class="header" id="myHeader">
+    <div id="conteneur">
+
+        <img src="../../assets/images/Accueil/logoPetit.jpg" alt="banniere" class="banniere">
+        <div class="myDiv">
+
+
+            <img src="../../assets/images/Accueil/banniere2.png" alt="banniere" class="banniere">
+
+
+        </div>
+        <img src="../../assets/images/Accueil/logoPetit.jpg" alt="banniere" class="banniere">
+    </div>
+
+
+    <div id="navbar">
+        <a class="active" routerLink='/accueil'>Accueil</a>
+        <a routerLink='/inscription'>S'inscrire</a>
+        <a routerLink='/connexion'>Se connecter</a>
+        <a routerLink='/nousContacter'>Nous contacter</a>
+        <a routerLink='/faireUnDon'>Faire un don</a>
+        <a routerLink='/villagekabe'>Le village de Kabé</a>
+        <a routerLink='/a'>Parrainage</a>
+        <a routerLink='/projet'>Nos projets</a>
+        <a routerLink='/vente'>Ventes</a>
+        <a routerLink='/evenement'>Evenements</a>
+        <a routerLink='/a'>Mon Profil</a>
+    </div>
+</div>
+
+<script>
+    /*stick barre de navigation*/
+
+    window.onscroll = function() {
+        myFunction()
+    };
+
+    var navbar = document.getElementById("navbar ");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky ")
+        } else {
+            navbar.classList.remove("sticky ");
+        }
+    }
+
+    /*stick logo
+    window.onscroll = function () {
+    myFunction()
+    };
+
+    var header = document.getElementById("myHeader ");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+    if (window.pageYOffset > sticky) {
+    header.classList.add("sticky ");
+    } else {
+    header.classList.remove("sticky ");
+    }
+    }
+    */
+</script>

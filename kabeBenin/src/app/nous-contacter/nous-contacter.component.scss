@@ -1,0 +1,21 @@
+#conteneur {
+    display: flex;
+    background-color: #DCDCDC;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 6px;
+    border: 3px solid brown;
+    box-shadow: 10px 5px 5px brown;
+    background: linear-gradient(green, yellow, red);
+    margin-top: 25%;
+}
+
+iframe {
+    border-radius: 6px;
+    border: 3px solid brown;
+    box-shadow: 10px 5px 5px brown;
+    margin-top: 3%;
+}
