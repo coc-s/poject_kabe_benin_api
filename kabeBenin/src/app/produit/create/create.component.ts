@@ -3,9 +3,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ProduitService } from 'src/app/service/produit.service';
 import { UserService } from 'src/app/service/user.service';
 
-
-
-
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -35,8 +32,8 @@ produitForm: FormGroup;
     console.log(values)
     this.produitService.save(values).subscribe(
 
-      () => 'qdjgelglealjn',
-      () => 'lfekaielhfma',
+      () => '',
+      () => '',
       () => alert('User has been add successfully')
     );
 

@@ -26,7 +26,7 @@ export class Parrainage {
         this.dateNaissEnfant = dateNaissEnfant;
         this.sexe = sexe;
         this.dateParrainage = dateParrainage;
-        this.ecole = ecole
+        this.ecole = ecole;
         this.village = village;
     
 
